@@ -1,0 +1,87 @@
+{
+    "companyName": {
+        "firstHalf": "GAME",
+        "secondHalf": "PLAYERS"
+    },
+    "logoImage": "./assets/icons/logo.svg",
+    "navItems": {
+        "navLinks": [
+            {
+                "label": "Home",
+                "url": "#"
+            },
+            {
+                "label": "About",
+                "url": "#about"
+            },
+            {
+                "label": "Subscription",
+                "url": "#subscription"
+            }
+        ],
+        "navButtons": [
+            {
+                "label": "Dashboard",
+                "url": "/dashboard",
+                "buttonTheme": "button1",
+                "iconUrl": "./assets/icons/dashboard-icon.svg",
+                "iconUrlHover": "./assets/icons/dashboard-icon-hover.svg"
+            },
+            {
+                "label": "Download",
+                "url": "#",
+                "buttonTheme": "button2",
+                "iconUrl": "./assets/icons/download-icon.svg",
+                "iconUrlHover": "./assets/icons/download-icon-hover.svg"
+            }
+        ]
+    },
+    "hero": {
+        "title": {
+            "firstHalf": "GAME",
+            "secondHalf": "PLAYERS"
+        },
+        "description": "Are you tired of toxic players and trolls? Do you want to know people who play like you? Follow your growth in games, make friends, create a team, win championships. Meet GAMEPLAYERS and have fun playing for real! ",
+        "groupCTA": [
+            {
+                "ctaTheme": "ctaButton1",
+                "ctaText": "Download now",
+                "ctaUrl": "#services",
+                "ctaIconUrl": "./assets/icons/cursor-click.svg",
+                "ctaIconUrlHover": "./assets/icons/cursor-click-hover.svg"
+            },
+            {
+                "ctaTheme": "ctaButton2",
+                "ctaText": "Or go to Dashboard",
+                "ctaUrl": "#services",
+                "ctaIconUrl": ""
+            }
+        ],
+        "socialLinks": [
+            {
+                "enable": true,
+                "label": "discord",
+                "url": "",
+                "iconUrl": "./assets/icons/discord.svg"
+            },
+            {
+                "enable": true,
+                "label": "instagram",
+                "url": "",
+                "iconUrl": "./assets/icons/instagram.svg"
+            },
+            {
+                "enable": true,
+                "label": "twitter",
+                "url": "",
+                "iconUrl": "./assets/icons/twitter.svg"
+            },
+            {
+                "enable": true,
+                "label": "facebook",
+                "url": "",
+                "iconUrl": "./assets/icons/facebook.svg"
+            }
+        ]
+    }
+}

@@ -1,0 +1,29 @@
+.flex-ver-center {
+    display: flex;
+    align-items: center;
+}
+
+.flex-hoz-center {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-full-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.no-select,
+.no-select *{
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none;         /* Standard */
+    -webkit-touch-callout: none; /* iOS long-press menu */
+    -webkit-tap-highlight-color: transparent; /* iOS/Android tap highlight */
+}

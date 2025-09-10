@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>GamePlayers </title>
+    <!-- Google Fonts Start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Google Fonts End -->
+
+    <!-- Style CSS files -->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/utils.css">
+</head>
+
+<body>
+    <div class="mainContainerWrapper">
+        <!-- Navbar Start -->
+        <nav role="navigation" aria-label="Main navigation">
+            <div class="logo flex-ver-center">
+                <img class="logoImage no-select" src="./assets/icons/logo.svg" alt="logo" loading="lazy">
+                <span class="companyName" aria-label="Game Players"><span class="firstHalf">GAME</span><span
+                        class="secondHalf">PLAYERS</span></span>
+            </div>
+            <button class="hamburger" aria-label="Open Menu" aria-controls="primary-navigations" aria-expanded="false">
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+            </button>
+            <div id="primary-navigations" class="navItems flex-ver-center no-select" role="navigation">
+                <ul class="navLinks flex-full-center">
+                    <li><a class="navLink home" href="#">Home</a></li>
+                    <li><a class="navLink about" href="#about">About</a></li>
+                    <li><a class="navLink subscription" href="#Subscription">Subscription</a></li>
+                </ul>
+                <div class="navButtons flex-full-center">
+                    <button class="navButton button1">
+                        <a class="navBtnLink" href="/dashboard">
+                            <div class="button1IconWrapper">
+                                <img class="button1Icon" src="./assets/icons/dashboard-icon.svg">
+                                <img class="button1IconHover" src="./assets/icons/dashboard-icon-hover.svg">
+                            </div>
+                            <span class="">Dashboard</span>
+                        </a>
+                    </button>
+                    <button class="navButton button2">
+                        <a class="navBtnLink" href="#">
+                            <div class="button2IconWrapper">
+                                <img class="button2Icon" src="./assets/icons/download-icon.svg">
+                                <img class="button2IconHover" src="./assets/icons/download-icon-hover.svg">
+                            </div>
+                            <span>Download</span>
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+        <!-- Main Container Start -->
+        <main role="main" class="mainContainer">
+            <!-- Hero Section Start -->
+            <section class="heroSection" aria-label="hero-title">
+                <!-- Title -->
+                <h1 id="hero-title" class="title">
+                    <span class="firstHalf">GAME</span><span class="secondHalf">PLAYERS</span>
+                </h1>
+                <div class="divider" aria-hidden="true"></div>
+                <!-- Description -->
+                <p class="description">Are you tired of toxic players and trolls? Do you want to know people who play like
+                    you? Follow your growth in games, make friends, create a team, win championships. Meet GAMEPLAYERS and
+                    have fun playing for real!</p>
+                <!-- CTA Buttons -->
+                <div class="groupCTA flex-ver-center no-select">
+                    <button class="ctaButton ctaButton1">
+                        <a href="#" class="navBtnLink">
+                            <div class="ctaButtonWrapper">
+                                <img class="ctaButton1Icon" src="./assets/icons/cursor-click.svg">
+                                <img class="ctaButton1IconHover" src="./assets/icons/cursor-click-hover.svg">
+                            </div>
+                            <span>Download now</span>
+                        </a>
+                    </button>
+                    <button class="ctaButton ctaButton2">
+                        <!-- <img class="ctaButton2Icon" src=""> -->
+                        <a class="navBtnLink" href="#">Or go to Dashboard</a>
+                    </button>
+                </div>
+                <!--Social Links Buttons -->
+                <div class="socialLinks no-select">
+                    <a class="socialLink1" href="http://"><img src="./assets/icons/discord.svg" alt="discordIcon"></a>
+                    <a class="socialLink2" href="http://"><img src="./assets/icons/instagram.svg" alt="instagramIcon"></a>
+                    <a class="socialLink3" href="http://"><img src="./assets/icons/twitter.svg" alt="twitterIcon"></a>
+                    <a class="socialLink4" href="http://"><img src="./assets/icons/facebook.svg" alt="facebookIcon"></a>
+                </div>
+            </section>
+            <!-- Hero Section End -->
+        </main>
+        <!-- Main Container End -->
+    </div>
+    <!-- Footer Container - Start -->
+    <footer class="">
+        <div class="footerContainer">
+            <p><strong>GamePlayers Figma to Web</strong></p>
+            <div class="footerCredits">
+                <p>Developed by <a class="customA" href="https://github.com/shailendra99web" target="_blank" rel="noopener noreferrer">Shailendra
+                        Singh Verma</a></p>
+                <p>Design credits:
+                    <a class="customA" href="https://www.figma.com/@dia" target="_blank" rel="noopener noreferrer">
+                        Diego Augusto Ferreira
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer Container - End -->
+</body>
+
+<!-- Main JS file -->
+<script src="./js/main.js"></script>
+
+</html>

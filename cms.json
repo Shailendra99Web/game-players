@@ -1,0 +1,68 @@
+{
+    "companyName": {
+        "firstHalf": "GAME",
+        "secondHalf": "PLAYERS"
+    },
+    "logoImage": "./assets/icons/logo.svg",
+    "navItems": {
+        "navLinks": [
+            {
+                "label": "Home",
+                "url": "#"
+            },
+            {
+                "label": "About",
+                "url": "#about"
+            },
+            {
+                "label": "Subscription",
+                "url": "#subscription"
+            }
+        ],
+        "navButtons": [
+            {
+                "label": "Dashboard",
+                "url": "/dashboard"
+            },
+            {
+                "label": "Download",
+                "url": "/download"
+            }
+        ]
+    },
+    "hero": {
+        "title": {
+            "firstHalf": "GAME",
+            "secondHalf": "PLAYERS"
+        },
+        "description": "Are you tired of toxic players and trolls? Do you want to know people who play like you? Follow your growth in games, make friends, create a team, win championships. Meet GAMEPLAYERS and have fun playing for real! ",
+        "groupCTA": [
+            {
+                "label": "Download now",
+                "url": "/download"
+            },
+            {
+                "label": "Or go to Dashboard",
+                "url": "/dashboard"
+            }
+        ],
+        "socialLinks": [
+            {
+                "label": "discord",
+                "url": "/"
+            },
+            {
+                "label": "instagram",
+                "url": "/"
+            },
+            {
+                "label": "twitter",
+                "url": "/"
+            },
+            {
+                "label": "facebook",
+                "url": "/"
+            }
+        ]
+    }
+}

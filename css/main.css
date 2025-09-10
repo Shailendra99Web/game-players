@@ -1,0 +1,532 @@
+:root {
+    --background: black;
+    --foreground: white;
+    --primary: #D3373A;
+    --secondary: white;
+    --normalFontWeight: 300;
+    --normalFontSize: 18px;
+    --normalFontFamily: 'Inter', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* For Selection-color, Highlight-color */
+*::-moz-selection {
+    /* Code for Firefox */
+    color: var(--foreground);
+    background: #d34649;
+}
+
+*::selection {
+    color: var(--foreground);
+    background: #d34649;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+body {
+    font-family: 'Inter', serif;
+    color: var(--foreground);
+}
+
+/* Nav/Hero - CTA Buttons Style - Start */
+.navButton,
+.ctaButton {
+    border-radius: 10px;
+    height: 40px;
+    border: none;
+    transition: all 150ms linear;
+}
+
+.navBtnLink {
+    padding: 8px 16px;
+    height: 100%;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+    text-decoration: none;
+}
+
+.navBtnLink span {
+    font-size: var(--normalFontSize);
+    font-weight: var(--normalFontWeight);
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Inter', serif;
+}
+
+.button1IconWrapper,
+.button2IconWrapper,
+.ctaButtonWrapper {
+    position: relative;
+}
+
+.button1IconWrapper,
+.ctaButtonWrapper {
+    width: 24px;
+    height: 24px;
+}
+
+.button2IconWrapper {
+    width: 14px;
+    height: 14px;
+}
+
+.button1Icon,
+.button1IconHover,
+.button2Icon,
+.button2IconHover,
+.ctaButton1Icon,
+.ctaButton1IconHover {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.button1,
+.ctaButton1 {
+    background-color: var(--primary);
+    color: var(--foreground);
+}
+
+.button1:hover,
+.ctaButton1:hover {
+    cursor: pointer;
+    background-color: var(--foreground);
+    color: var(--primary);
+}
+
+.button1Icon,
+.button1IconHover,
+.button2Icon,
+.button2IconHover,
+.ctaButton1Icon,
+.ctaButton1IconHover {
+    transition: all 150ms linear;
+}
+
+.button1:hover .button1IconHover,
+.ctaButton1:hover .ctaButton1IconHover,
+.button2:hover .button2IconHover {
+    /* display: block; */
+    opacity: 100;
+    visibility: visible;
+}
+
+.button1:hover .button1Icon,
+.ctaButton1:hover .ctaButton1Icon,
+.button2IconHover,
+.button2:hover .button2Icon,
+.button1IconHover,
+.ctaButton1IconHover {
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Nav/Hero - CTA Buttons Style - End */
+
+/* Navbar Style - Start */
+nav {
+    padding: 57px 64px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* transform: translateY(-30px); */
+    opacity: 0;
+    animation: fade-in 400ms forwards cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity;
+}
+
+/* Hamburger button - base (desktop hidden by default) */
+.hamburger {
+    display: none;
+    width: 44px;
+    height: 44px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 50;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background-color: var(--foreground);
+    transition: transform 200ms ease, opacity 150ms ease, width 200ms ease;
+}
+
+/* Hamburger active → close icon */
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.companyName {
+    font-family: 'Anton', 'Inter', serif;
+    font-size: 36px;
+}
+
+.companyName .firstHalf,
+.title .firstHalf {
+    text-transform: uppercase;
+    color: var(--foreground);
+}
+
+.companyName .secondHalf,
+.title .secondHalf {
+    text-transform: uppercase;
+    color: var(--primary);
+}
+
+.navItems {
+    font-size: var(--normalFontSize);
+    display: flex;
+    gap: 32px;
+    font-weight: 300;
+}
+
+.navLinks {
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    gap: 32px;
+}
+
+.navLink {
+    text-decoration: none;
+    color: var(--foreground);
+    transition: all 150ms linear;
+}
+
+.navLink:hover {
+    color: var(--primary);
+}
+
+.navButtons {
+    display: flex;
+    gap: 32px;
+    font-size: var(--normalFontSize);
+    font-weight: var(--normalFontWeight);
+}
+
+.button2 {
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.button2:hover {
+    cursor: pointer;
+    border-color: var(--foreground);
+    color: var(--foreground);
+}
+
+.button2 .navBtnLink {
+    font-weight: 400;
+}
+
+/* Navbar Style - End */
+.mainContainerWrapper{
+    background-image: url(../assets/img/wallpaper-Aaatro2x.png);
+    background-size: cover;
+}
+/* Hero Section Style - Start */
+.heroSection {
+    padding: 126px 64px;
+    max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    height: calc(100% - 114px);
+    /* transform: translateX(-50px);
+    opacity: 0;
+    animation: slide-in 600ms forwards cubic-bezier(0.22, 1, 0.36, 1);
+    animation-delay: 120ms;
+    will-change: transform, opacity; */
+}
+
+.heroSection .title {
+    transform: translateX(-50px);
+    opacity: 0;
+    animation: slide-in 120ms forwards cubic-bezier(0.22, 1, 0.36, 1);
+    /* animation: slide-in 600ms forwards ease-in; */
+    animation-delay: 120ms;
+    will-change: transform, opacity;
+}
+
+.heroSection .divider {
+    display: inline-block;
+    transform: translateX(-50px);
+    opacity: 0;
+    animation: slide-in 240ms forwards cubic-bezier(0.22, 1, 0.36, 1);
+    /* animation: slide-in 600ms forwards ease-in; */
+    animation-delay: 120ms;
+    will-change: transform, opacity;
+}
+
+.heroSection .description {
+    transform: translateX(-50px);
+    opacity: 0;
+    animation: slide-in 360ms forwards cubic-bezier(0.22, 1, 0.36, 1);
+    /* animation: slide-in 600ms forwards ease-in; */
+    animation-delay: 120ms;
+    will-change: transform, opacity;
+}
+
+.heroSection .groupCTA {
+    transform: translateX(-50px);
+    opacity: 0;
+    animation: slide-in 480ms forwards cubic-bezier(0.22, 1, 0.36, 1);
+    /* animation: slide-in 600ms forwards ease-in; */
+    animation-delay: 120ms;
+    will-change: transform, opacity;
+}
+
+.heroSection .socialLinks {
+    transform: translateX(-50px);
+    opacity: 0;
+    animation: slide-in 600ms forwards cubic-bezier(0.22, 1, 0.36, 1);
+    /* animation: slide-in 600ms forwards ease-in; */
+    animation-delay: 120ms;
+    will-change: transform, opacity;
+}
+
+.title {
+    font-family: 'Anton', 'Inter', serif;
+    font-weight: 500;
+    font-size: 85px;
+    margin: 0;
+}
+
+main .divider {
+    border: 2.8px solid var(--foreground);
+    width: 256px;
+    margin: 0;
+}
+
+/* Hero section divider */
+
+.description {
+    font-size: var(--normalFontSize);
+    font-weight: var(--normalFontWeight);
+}
+
+.ctaButton1 .navBtnLink {
+    flex-direction: row-reverse;
+}
+
+.ctaButton2 {
+    background-color: transparent;
+    color: var(--foreground);
+}
+
+.ctaButton2 a:hover {
+    color: var(--primary);
+}
+
+.ctaButton1 span {
+    font-size: (--normalFontSize);
+    font-weight: var(--normalFontWeight);
+}
+
+.ctaButton2 a {
+    font-size: 16px;
+    font-weight: var(--normalFontWeight);
+}
+
+.socialLinks {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+
+.socialLinks a {
+    display: block;
+    transition: all 150ms linear;
+}
+
+.socialLinks a:hover {
+    transform: scale(1.16);
+}
+
+.errorMessage {
+    width: max-content;
+    margin: 67px auto 0 67px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.customButton1 {
+    width: max-content;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 40px;
+    border: none;
+    transition: all 150ms linear;
+    padding: 8px 16px;
+    height: 100%;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--normalFontSize);
+    font-weight: var(--normalFontWeight);
+    text-decoration: none;
+    background-color: var(--primary);
+    color: var(--foreground);
+    font-family: 'Inter', serif;
+}
+
+.customButton1:hover {
+    color: var(--primary);
+    background-color: var(--foreground);
+}
+
+.customA{
+    text-decoration: none;
+    color: #d34649;
+    font-family: 'Inter', serif;
+    /* background-color: var(--primary); */
+}
+.customA:hover{
+    color: var(--foreground);
+}
+
+/* Hero Section Style - End */
+
+
+/* Footer Style - Start */
+footer{
+    background-color: var(--background);
+    padding: 8px 0;
+}
+.footerContainer {
+
+    width: max-content;
+    text-align: center;
+    margin: auto;
+    font-family: 'Inter', serif;
+}
+.footerCredits{
+    display: flex;
+    gap: 16px;
+}
+
+/* Footer Style - End */
+
+/* Animation Keyframes - Start */
+@keyframes slide-in {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animation Keyframes - End */
+
+/* Responsive Breakpoints Media Queries - Start */
+@media (max-width:397px) {
+    .ctaButton1 {
+        height: 60px;
+    }
+
+    .heroSection .title {
+        margin: 0px auto;
+    }
+}
+
+@media (max-width:1086px) {
+    body {
+        min-height: 100vh;
+    }
+
+    nav {
+        padding: 16px 16px 0;
+        position: relative;
+        z-index: 40;
+    }
+
+    /* Show hamburger on mobile */
+    .hamburger {
+        display: inline-flex;
+    }
+
+    /* Collapse menu by default on mobile */
+    nav .navItems {
+        visibility: hidden;
+        opacity: 0;
+        overflow: hidden;
+        transform: translateY(-20px);
+        transition: all 150ms linear;
+
+        position: absolute;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.7959558823529411) 0%, #000000 100%);
+        inset: 0 0 0;
+        z-index: 40;
+        padding: 32px 0;
+        height: max-content;
+        border-radius: 30px;
+    }
+
+    nav .navItems.openMenu {
+        transform: translateY(0);
+        opacity: 100 !important;
+        visibility: visible !important;
+        pointer-events: all !important;
+    }
+
+    nav .navItems,
+    nav .navLinks,
+    nav .navButtons {
+        flex-direction: column;
+    }
+
+    .mainContainer {
+        height: calc(100vh - 93px);
+        display: flex;
+        align-items: center;
+    }
+
+    .heroSection {
+        margin: 0 16px;
+        height: max-content;
+    }
+
+    .heroSection .title {
+        font-size: 66px;
+        width: max-content;
+    }
+}
+
+/* Responsive Breakpoints Media Queries - End */
